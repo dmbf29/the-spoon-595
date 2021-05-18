@@ -1,0 +1,11 @@
+<div class="container mt-5">
+  <h1><%= @restaurant.name %></h1>
+  <p><%= @restaurant.address %></p>
+  <p><%= "⭐️" * @restaurant.rating %></p>
+  <%= link_to restaurants_path do %>
+    <i class="fas fa-home"></i>
+  <% end %>
+  <%= link_to restaurant_path(@restaurant), method: :delete, data: { confirm: 'Do you want to delete?' } do %>
+    <i class="fas fa-trash"></i>
+  <% end %>
+</div>
